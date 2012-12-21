@@ -1,0 +1,222 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+body {
+	font-size: 16px;
+	line-height: 24px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, .article.list h2 {
+	font-size: 36px;
+	line-height: 38px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+}
+
+h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 26px;
+	font-style: italic;
+}
+
+h3 {
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 24px;
+	font-style: italic;
+	font-weight: 600;
+}
+
+h4, h5, h6 {
+	font-size: 16-px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.article em {
+	font-style: italic;
+}
+
+.article strong {
+	font-weight: bold;
+}
+
+.article strike, .article s {
+	text-decoration:line-through;
+}
+
+.article sub {
+	vertical-align: sub;
+	font-size:smaller;
+}
+
+.article sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+input, 
+textarea, 
+select {
+	font-size: 12px;
+	font-family: arial, sans-serif;
+}
+
+.article blockquote, .article address {
+	font-style: italic;
+}
+
+.article blockquote cite {
+	font-weight: 600;
+}
+
+.article p big {
+	font-size: 24px;
+}
+
+.article cite {
+	font-style: italic;
+}
+
+.article table tr th {
+	font-weight: 600;
+}
+
+.article dl dt {
+	font-weight:bold;
+}
+
+.article code, .article kbd, .article tt, .article pre, .article var {
+	font-family: monospace;
+}
+
+.article .wp-caption  .wp-caption-text {
+	font-style:italic;
+}
+
+.gallery .gallery-item  .gallery-caption {
+	font-style:italic;
+}
+
+.byline {
+	font-size: 12px;
+}
+
+.entry-meta {
+	font-size: 12px;
+}
+
+.navigation ul li {
+	font-size: 16px;
+	line-height: 40px;
+}
+
+.navigation ul li ul li {
+	font-size: 16px;
+	line-height: 21px;
+}
+
+.search input.field {
+	font-size: 18px;
+}
+
+.search input.search-btn {
+	font-size: 18px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.second-menu ul li {
+	font-size: 16px;
+	line-height: 40px;
+}
+
+.second-menu ul li ul li {
+	line-height: 28px;
+}
+
+.breadcrumbs-with-menu {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.breadcrumbs-without-menu {
+	font-size: 16px;
+	line-height: 40px;
+}
+
+.breadcrumbs a {
+	font-style: italic;
+}
+
+#container p.summary {
+	font-size: 18px;
+	line-height: 27px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.four-column .col .text {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.widget .col .text p {
+	line-height: 18px;
+	font-style: italic;
+}
+
+.widget-type-1 {
+	font-size: 16px;
+}
+
+.widget-type-3 .col .text p {
+	font-style: normal;
+}
+
+.post h2 {
+	font-size: 24px;
+	line-height: 26px;
+	font-style: italic;
+}
+
+.post h3 {
+	font-size: 16px;
+	line-height: 24px;
+	font-style: italic;
+}
+
+#container h1 {
+	font-size: 36px;
+	line-height: 38px;
+	text-transform: uppercase;
+}
+
+#content .two-column .col h2 {
+	font-size: 24px;
+	line-height: 26px;
+	font-style: italic;
+}
+
+#sidebar h3 {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+#footer .footer-menu ul li {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#footer .copy {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.page-links span {
+	font-weight: 600;
+}

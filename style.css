@@ -1,0 +1,13 @@
+/*
+Theme Name:		Gorilla League
+Theme URI:		localhost
+Description:	A simple theme with unlimited color possibilities
+Version:		0.1
+Author:			Aaron Nelson
+Author URI:		localhost
+*/
+
+@import url("stylesheets/reset.css");
+@import url("stylesheets/style.css");
+@import url("stylesheets/color.css");
+@import url("stylesheets/fonts.css");
