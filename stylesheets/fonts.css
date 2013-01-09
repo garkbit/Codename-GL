@@ -66,6 +66,10 @@ select {
 	font-family: arial, sans-serif;
 }
 
+.article input {
+	font-size: 16px;
+}
+
 .article blockquote, .article address {
 	font-style: italic;
 }
@@ -120,11 +124,11 @@ select {
 	line-height: 21px;
 }
 
-.search input.field {
+.header-search input.field {
 	font-size: 18px;
 }
 
-.search input.search-btn {
+.header-search input.search-btn {
 	font-size: 18px;
 	font-weight: 600;
 	font-style: italic;

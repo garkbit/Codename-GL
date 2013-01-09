@@ -131,16 +131,16 @@ table tr:nth-child(odd) {
 	background: url(images/dd-item-bg.png) repeat-y 0 0;
 }
 
-.search {
+.header-search {
 	background: #e3e3e3 url(images/search-bg.png) repeat-x 0 0;
 }
 
-.search input.field {
+.header-search input.field {
 	background: url(images/search-field-bg.png) no-repeat right center;
 	color: #898989;
 }
 
-.search input.search-btn {
+.header-search input.search-btn {
 	background: #c4c4c4;
 	color: #e3e3e3;
 }
@@ -150,7 +150,6 @@ table tr:nth-child(odd) {
 	border-bottom: solid 1px #c7c7c7;
 	background: #fbfbfb;
 }
-
 
 .second-menu ul li {
 	color: #8b8b8b;

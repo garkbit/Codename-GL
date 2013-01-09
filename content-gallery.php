@@ -28,9 +28,9 @@ do_atomic( 'before_entry' ); // unique_before_entry ?>
 								<?php the_content(); ?>
 								<?php wp_link_pages( array( 'before' => '<div class="page-links">Pages:', 'after' => '</div><div class="cl"></div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 							</div>
-								<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms before="<br />Tagged "]', 'unique' ) . '</div>' ); ?>
-							<div class="article-footer">
 							
+							<div class="article-footer">
+								<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms before="<br />Tagged "]', 'unique' ) . '</div>' ); ?>
 							</div>
 							<!-- End Single Column -->
 						</div>
@@ -56,9 +56,9 @@ do_atomic( 'before_entry' ); // unique_before_entry ?>
 								<?php $count = unique_get_image_attachment_count(); ?>
 								<p class="image-count"><?php printf( _n( 'This gallery contains %s image.', 'This gallery contains %s images.', $count, 'unique' ), $count ); ?></p>
 							</div>
-								<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms before="<br />Tagged "]', 'unique' ) . '</div>' ); ?>
-							<div class="article-footer">
 							
+							<div class="article-footer">
+								<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms before="<br />Tagged "]', 'unique' ) . '</div>' ); ?>
 							</div>
 							<!-- End Single Column -->
 						</div>

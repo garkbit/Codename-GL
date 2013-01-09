@@ -28,6 +28,13 @@ h1, .article.list h2 {
 	padding: 45px 0 0 0;
 }
 
+.article-header p {
+	font-size: 18px;
+	line-height: 27px;
+	font-weight: 600;
+	font-style: italic;
+}
+
 .article-header h1, .article.list .article-header h2 {
 	padding:0;
 	margin: 0;
@@ -235,6 +242,155 @@ textarea {
 	margin: 0 auto;
 }
 
+#comments {
+	margin-top:60px;
+}
+
+.comment-list li .avatar {
+	width:60px;
+	height:60px;
+	float:left;
+	margin-right:20px;
+	box-shadow: #858585 0 2px 5px;
+	moz-box-shadow: #858585 0 2px 5px;
+	-webkit-box-shadow: #858585 0 2px 5px;
+}
+
+.comment-list li .comment-content-wrap {
+	margin-left:80px;
+}
+
+.comment-list li {
+	margin-bottom:60px;
+}
+
+.comment-list li .comment-content,
+.comment-list li .ping-content {
+	border-top:#c7c7c7 1px solid;
+}
+
+.comment-list li .comment-content .comment-meta,
+.comment-list li .ping-content .ping-meta {
+	font-size:12px;
+}
+
+.comment-list li .comment-content .comment-meta .permalink,
+.comment-list li .comment-content .comment-meta .comment-edit-link,
+.comment-list li .ping-content .ping-meta .permalink,
+.comment-list li .ping-content .ping-meta .comment-edit-link {
+	float:right;
+	margin-left: 5px;
+}
+
+.comment-list li .comment-content .comment-reply-link,
+.comment-list li .ping-content .ping-reply-link {
+	float:right;
+	font-weight:bold;
+	padding:2px 8px;
+	background-color:#0252AA;
+	color:#fbfbfb;
+	font-size:12px;
+}
+
+.comment-list .depth-2 {
+	margin-left:80px;
+}
+
+.comment-list .depth-3 {
+	margin-left:160px;
+}
+
+.comment-list .depth-4,
+.comment-list .depth-5,
+.comment-list .depth-6,
+.comment-list .depth-7,
+.comment-list .depth-8,
+.comment-list .depth-9,
+.comment-list .depth-10 {
+	margin-left:240px;
+}
+
+.comments-nav {
+	background-color:#e2e2e2;
+	margin-bottom:20px;
+	margin-top:50px;
+	padding:0 5px;
+}
+
+.comments-nav strong {
+	font-weight:600;
+}
+
+.comments-nav .next-link,
+.comments-nav .prev-link,
+.comments-nav .page-numbers {
+	float:right;
+	font-size:12px;
+	margin-left:20px;
+}
+
+.loop-nav .previous{
+	font-size:12px;
+	float:left;
+}
+
+.loop-nav .next {
+	font-size:12px;
+	float:right;
+}
+
+#respond {
+	margin-bottom:20px;
+}
+
+#respond h3 {
+	font-style:normal;
+	font-weight:600;
+	font-size: 24px;
+}
+
+#respond h3 small {
+	font-size:12px;
+	text-transform:none;
+}
+
+#respond label {
+	font-size:12px;
+}
+
+#respond textarea {
+	display:block;
+	width:100%;
+	border: solid #c7c7c7 1px;
+	background-color:#fbfbfb;
+	font-size:18px;
+	font-weight:normal;
+	color:#787878;
+	padding:5px;
+}
+
+#respond .text-input {
+	display:block;
+	border: solid #c7c7c7 1px;
+	background-color:#fbfbfb;
+	font-size:18px;
+	font-weight:normal;
+	color:#787878;
+	padding:5px;
+}
+
+#respond #submit {
+	background-color:#0252AA;
+	color:#fbfbfb;
+	font-size:12px;
+	font-weight:bold;
+	float:right;
+	border:none;
+	padding:5px 10px;
+	cursor:pointer;
+}
+
+
 #wrapper {
 	min-height: 100%;
 	height: auto !important;
@@ -268,20 +424,25 @@ textarea {
 }
 
 .navigation ul {
-	float: left;
-	display: inline;
+	/*float: left;
+	display: inline;*/
+	display: table;
+	width:100%;
 }
 
 .navigation ul li {
 	position: relative;
-	float: left;
+	/*float: left;
 	display: inline;
-	padding: 0 1px 0 0;
+	padding: 0 1px 0 0;*/
+	display: table-cell;
+	text-align:center;
 }
 
 .navigation ul li a {
 	float: left;
-	padding: 20px 20px 0 20px;
+	padding: 20px 0 0 0;
+	width:100%;
 }
 
 .navigation ul li.sfHover a,
@@ -304,11 +465,19 @@ textarea {
 	float: none;
 	width: 200px;
 	padding: 10px 0;
+	display:none;
+}
+
+.navigation ul li ul li ul {
+	position: absolute;
+	top:-10px;
+	left: 0;
 }
 
 .navigation ul li ul li {
 	display: block;
 	float: none;
+	text-align:left;
 }
 
 .navigation ul li ul li a {
@@ -345,14 +514,14 @@ textarea {
 	padding: 20px 23px 0 23px;
 }
 
-.search {
+.header-search {
 	position: absolute;
 	top: 30px;
 	right: 0;
 	width: 300px;
 	height: 40px;}
 
-.search input.field {
+.header-search input.field {
 	float: right;
 	display: inline;
 	width: 181px;
@@ -361,7 +530,7 @@ textarea {
 	margin: 0 9px 0 0;
 }
 
-.search input.search-btn {
+.header-search input.search-btn {
 	float: left;
 	display: inline;
 	width: 70px;
@@ -371,11 +540,15 @@ textarea {
 	cursor: pointer;
 }
 
+.article input {
+	padding:3px;
+}
+
 .header-c {
 	padding-top: 0 !important;
 }
 
-.header-c .search {
+.header-c .header-search {
 	top: 90px;
 	right: 20px;
 }
@@ -391,6 +564,11 @@ textarea {
 .second-menu {
 	position: relative;
 	z-index: 8;
+}
+
+.second-menu ul {
+	display:table;
+	width:100%;
 }
 
 .second-menu ul li {
@@ -420,7 +598,7 @@ textarea {
 }
 
 .second-menu ul li:last-child a {
-	padding: 0;
+	/*padding: 0;*/
 }
 
 .second-menu ul li ul {
@@ -428,6 +606,7 @@ textarea {
 	position: absolute;
 	top: 100%;
 	left: 0;
+	display:none;
 }
 
 .second-menu ul li ul li {
@@ -436,14 +615,21 @@ textarea {
 	padding: 0;
 }
 
+.second-menu ul li ul li ul {
+	position:absolute;
+	top:0;
+	left:0;
+	border-top:1px solid #c7c7c7;
+}
+
 .second-menu ul li ul li a {
 	padding: 0 5px 0 10px;
 	display: block;
 	float: none;
 }
 
-.second-menu ul li ul li:last-child a {
-	 }
+/*.second-menu ul li ul li:last-child a {
+	 }*/
 
 .second-menu ul li.sfHover ul li a {
 	 }
@@ -716,7 +902,7 @@ textarea {
 	text-align: justify;
 }
 
-#content {
+#content.left {
 	width: 620px;
 }
 
@@ -739,15 +925,48 @@ textarea {
 
 #sidebar {
 	width: 300px;
+	margin-top: 50px;
 }
 
 #sidebar h3 {
 	padding: 0 0 15px 0;
 	margin: 0 0 15px 0;
+	font-style: normal;
 }
 
 #sidebar ul li {
 	padding: 0 0 5px 15px;
+}
+
+#wp-calendar {
+	width:100%;
+	text-align:center;
+}
+
+#wp-calendar td {
+	width:14%;
+}
+
+#wp-calendar thead {
+	font-size:12px;
+	font-weight: bold;
+	text-transform:uppercase;
+}
+
+#wp-calendar tfoot {
+	font-size:12px;
+	text-transform:uppercase;
+}
+
+.widget-search .search-text {
+	display:block;
+	border: solid #c7c7c7 1px;
+	background-color:#fbfbfb;
+	font-size:18px;
+	font-weight:normal;
+	color:#787878;
+	padding:5px;
+	width:288px;
 }
 
 #footer, #footer-push {
@@ -779,12 +998,18 @@ textarea {
 	text-align: center;
 }
 
+#footer .footer-menu ul {
+	display:table;
+	width:100%;
+}
+
 #footer .footer-menu ul li {
-	display: inline;
-	padding: 0 20px;
+	display: table-cell;
+	text-align:center;
 }
 
 #footer .copy {
+	float:right;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -797,6 +1022,25 @@ textarea {
 }
 
 .page-links span {
-	padding:2px 8px;;
+	padding:2px 8px;
 	margin:0 2px;
+}
+
+.pagination {
+	float:right;
+	margin:10px 0;
+}
+
+.pagination a.page-numbers:not(.prev):not(.next) {
+	padding: 2px 8px;
+	margin:0 2px;
+	background-color:#0252aa;
+	color:#fbfbfb;
+}
+
+.pagination span.current {
+	padding: 2px 8px;
+	margin:0 2px;
+	background-color:#787878;
+	color:#fbfbfb;
 }
