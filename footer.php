@@ -4,9 +4,39 @@
 
 		</div>
 		<!-- End Shell -->
-		<?php get_sidebar('secondary'); ?>
+		<?php if(is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' )){
+			if(is_active_sidebar( 'footer-1')){
+				echo('<hr class="footer-line-1" />');
+			} elseif(is_active_sidebar( 'footer-2')) {
+				echo('<hr class="footer-line-2" />');
+			} elseif(is_active_sidebar( 'footer-3')) {
+				echo('<hr class="footer-line-3" />');
+			}
+		}
+		get_sidebar('footer-1');
+		if(is_active_sidebar( 'footer-1' )){
+			if(is_active_sidebar( 'footer-2' )) {
+				echo('<hr class="footer-line-2" />');
+			} elseif(is_active_sidebar( 'footer-3' )) {
+				echo('<hr class="footer-line-3" />');
+			} else {
+				echo('<hr class="footer-line-1" />');
+			}
+		}
+		get_sidebar('footer-2');
+		if(is_active_sidebar( 'footer-2' )){
+			if(is_active_sidebar( 'footer-3' )) {
+				echo('<hr class="footer-line-3" />');
+			} else {
+				echo('<hr class="footer-line-2" />');
+			}
+		}
+		get_sidebar('footer-3');
+		if(is_active_sidebar( 'footer-3' )){
+			echo('<hr class="footer-line-3" />');
+		} ?>
 		<div class="cl" id="footer-push">&nbsp;</div>
-	</div>
+	</div><!-- #wrapper -->
 	<!-- End Wrapper -->
 	<!-- Footer -->
 	<?php do_atomic( 'before_footer' ); // hybrid_before_footer ?>

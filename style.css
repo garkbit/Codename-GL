@@ -7,7 +7,5 @@ Author:			Aaron Nelson
 Author URI:		localhost
 */
 
-@import url("stylesheets/reset.css");
-@import url("stylesheets/style.css");
 @import url("stylesheets/color.css");
 @import url("stylesheets/fonts.css");

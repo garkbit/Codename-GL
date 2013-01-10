@@ -3,6 +3,8 @@
 <head <?php language_attributes(); ?>>
 	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 	<title><?php hybrid_document_title(); ?></title>
+	<link rel="stylesheet" href="<?php echo (bloginfo('template_directory')); ?>/stylesheets/reset.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="<?php echo (bloginfo('template_directory')); ?>/stylesheets/style.php" type="text/css" media="all" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -12,7 +14,6 @@
 </head>
 		
 <body>
-	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- Shell -->
 		<div class="shell">
