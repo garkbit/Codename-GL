@@ -139,6 +139,11 @@ textarea {
 	margin:20px 20px 20px 0;
 }
 
+.article img {
+	max-width:610px;
+	height:auto;
+}
+
 .article img.aligncenter {
 	margin: 20px auto;
 }
@@ -405,7 +410,15 @@ textarea {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -111px;
+	margin: 0 auto;
+}
+
+#wrapper > .background-texture {
+	background: url(images/texture-stripes-black.png) repeat 0 0;
+}
+
+#wrapper > .background-texture > .fade-bottom {
+	background: url(images/fade-bottom-white.png) repeat-x 0 0;
 }
 
 #header {
@@ -727,7 +740,7 @@ textarea {
 .three-column {
 	width: 960px;
 	margin: 0 -10px;
-	padding: 0 0 10px 0;
+	padding: 0;
 	position: relative;
 }
 
@@ -852,8 +865,8 @@ textarea {
 	right: -20px;
 }
 
-.widget {
-	padding: 30px 10px;
+.widget .shell {
+	padding: 30px 0;
 }
 
 .widget h2 {
@@ -882,11 +895,26 @@ textarea {
 	font-style:italic;
 }
 
+.widget-type-1 .background-texture {
+	background: url(images/texture-stripes-black.png) repeat 0 0;
+}
+
+.widget .top-fade {
+	background: url(images/fade-top-black.png) repeat-x 0 0;
+}
+
+.widget .bottom-fade {
+	background-image: url(images/fade-bottom-white.png);
+	background-repeat: repeat-x;
+	background-position:bottom;
+}
+
 .widget-type-1 h3 {
 	font-style:normal;
 	font-size:21px;
 	text-transform:uppercase;
 	color:#6f6f6f;
+	text-shadow:-1px -1px 0px #f2f2f2;
 }
 
 .widget-type-2 {
@@ -894,16 +922,25 @@ textarea {
 	font-style:italic;
 }
 
+.widget-type-2 .background-texture {
+	background: url(images/texture-stripes-black.png) repeat 0 0;
+}
+
 .widget-type-2 h3 {
 	font-style:normal;
 	font-size:21px;
 	text-transform:uppercase;
 	color:#515151;
+	text-shadow:-1px -1px 0px #e0e0e0;
 }
 
 .widget-type-3 {
 	color:#c4c4c4;
 	font-style:italic;
+}
+
+.widget-type-3 .background-texture {
+	background: url(images/texture-stripes-white.png) repeat 0 0;
 }
 
 .widget-type-3 a {
@@ -915,6 +952,7 @@ textarea {
 	font-size:21px;
 	text-transform:uppercase;
 	color:#e3e3e3;
+	text-shadow:1px 1px 0px #484848;
 }
 
 .widget-type-2 .image {
@@ -990,7 +1028,7 @@ textarea {
 
 #sidebar {
 	width: 300px;
-	margin-top: 50px;
+	margin-top: 80px;
 }
 
 #sidebar h3 {
@@ -1034,14 +1072,16 @@ textarea {
 	width:288px;
 }
 
-#footer, #footer-push {
-	height: 110px;
-	margin-top:20px;
+#footer .shell {
+	padding: 30px 0;
 }
 
-#footer {
-	height: 80px;
-	padding: 0 0 30px 0;
+#footer .background-texture {
+	background: url(images/texture-stripes-black.png) repeat 0 0;
+}
+
+#footer .fade-top {
+	background: url(images/fade-top-black.png) repeat-x 0 0;
 }
 
 #footer .shell {
@@ -1077,7 +1117,7 @@ textarea {
 #footer .copy {
 	float:right;
 	position: absolute;
-	bottom: 0;
+	bottom: 30px;
 	right: 0;
 }
 

@@ -16,12 +16,18 @@
 if ( is_active_sidebar( 'footer-1' ) ) : ?>
 
 	<div class="widget widget-type-1">
-		<div class="shell">
-			<div class="four-column">
-				<?php dynamic_sidebar( 'footer-1' ); ?>
-				<div class="cl"></div>
-			</div><!-- .four-column -->
-		</div><!-- .shell -->
+		<div class="background-texture">
+			<div class="top-fade">
+				<div class="bottom-fade">
+					<div class="shell">
+						<div class="four-column">
+							<?php dynamic_sidebar( 'footer-1' ); ?>
+							<div class="cl"></div>
+						</div><!-- .four-column -->
+					</div><!-- .shell -->
+				</div><!-- .bottom-fade -->
+			</div><!-- .top-fade -->
+		</div><!-- .background-texture -->
 	</div><!-- .widget-type-1 -->
 
 <?php endif; ?>

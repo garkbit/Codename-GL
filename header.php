@@ -15,7 +15,8 @@
 		
 <body>
 	<div id="wrapper">
-		<!-- Shell -->
+		<div class="background-texture">
+		<div class="fade-bottom">
 		<div class="shell">
 			
 			<!-- Header -->

@@ -237,7 +237,7 @@ table tr:nth-child(odd) {
 }
 
 .widget-type-2 {
-	background: #c4c4c4 url(images/widget-2-bg.png) repeat 0 0;
+	background: #c4c4c4;
 }
 
 .widget-type-2 h2 {
@@ -254,7 +254,7 @@ table tr:nth-child(odd) {
 }
 
 .widget-type-3 {
-	background: #898989 url(images/widget-3-bg.png) repeat 0 0;
+	background: #898989;
 }
 
 .widget-type-3 h2 {
