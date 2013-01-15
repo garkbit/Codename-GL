@@ -12,7 +12,8 @@
  * @copyright Copyright (c) 2012, Aaron Nelson
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-
+$body_color = get_theme_mod('body_color');
+$body_colors = an_colorsplosion($body_color);
 if ( is_active_sidebar( 'primary' ) ) : ?>
 
 	<div id="sidebar" class="right">
