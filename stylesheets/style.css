@@ -1,12 +1,3 @@
-<?php
-
-header('Content-type: text/css');
-
-$a2d50 = 'c7c7c7';
-$a3d50 = 'a8a8a8';
-$a4d50 = '606060';
-
-?>
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 
 /*
@@ -20,8 +11,6 @@ html {
 
 body {
 	min-width: 960px;
-	color: #787878;
-	background: #fbfbfb;
 	font-size: 16px;
 	line-height: 1.5em;
 	font-family: 'Open Sans', sans-serif;
@@ -30,12 +19,11 @@ body {
 h1 {
 	padding: 5px 0 10px 0;
 	clear:both;
-	color: #8c8c8c;
 	border-bottom: none;
 	font-size: 2.25em;
 	line-height: 2.375em;
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 700;
 	font-style: normal;
 	text-align: left;
 }
@@ -44,9 +32,7 @@ h2 {
 	padding: 5px 0 10px 0;
 	margin: 0 0 10px 0;
 	clear:both;
-	color: #8c8c8c;
-	border-bottom: solid 1px #c7c7c7;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 1.5em;
 	line-height: 1.625em;
@@ -56,7 +42,6 @@ h2 {
 h3 {
 	padding: 5px 0 19px 0;
 	clear:both;
-	color: #787878;
 	text-transform: uppercase;
 	font-size: 1em;
 	line-height: 1.5em;
@@ -69,8 +54,7 @@ h5,
 h6 {
 	padding: 5px 0 10px 0;
 	clear:both;
-	color: #787878;
-	font-size: 16-0em;
+	font-size: 1em;
 	line-height: 1.125em;
 	text-transform: uppercase;
 }
@@ -82,7 +66,6 @@ p {
 a {
 	text-decoration: none;
 	cursor: pointer;
-	color: #0252aa;
 }
 
 a img {
@@ -104,15 +87,6 @@ textarea,
 select {
 	font-size: 0.75em;
 	font-family: arial, sans-serif;
-}
-
-table tr th {
-	background-color: #787878;
-	color: #fbfbfb;
-}
-
-table tr:nth-child(odd) {
-	background-color:#e0e0e0;
 }
 
 .cl {
@@ -142,12 +116,8 @@ table tr:nth-child(odd) {
 	margin: 0 auto;
 }
 
-#wrapper > .background-texture {
-	background: url(images/texture-stripes-black.png) repeat 0 0;
-}
-
 #wrapper > .background-texture > .fade-bottom {
-	background: url(images/fade-bottom-white.png) repeat-x 0 0;
+	background: url(images/fade-bottom-white.png) repeat-x bottom;
 }
 
 #main {
@@ -163,7 +133,6 @@ table tr:nth-child(odd) {
 }
 
 #container h1 {
-	color: #8c8c8c;
 	font-size: 2.25em;
 	line-height: 2.375em;
 	text-transform: uppercase;
@@ -177,15 +146,11 @@ table tr:nth-child(odd) {
 .pagination a.page-numbers:not(.prev):not(.next) {
 	padding: 2px 8px;
 	margin:0 2px;
-	background-color:#0252aa;
-	color:#fbfbfb;
 }
 
 .pagination span.current {
 	padding: 2px 8px;
 	margin:0 2px;
-	background-color:#787878;
-	color:#fbfbfb;
 }
 
 /* End Header & Content Wrapper */
@@ -197,6 +162,7 @@ table tr:nth-child(odd) {
 #header {
 	padding: 20px 0;
 	position: relative;
+	min-height: 120px;
 	height: 100%;
 	z-index: 10;
 }
@@ -216,25 +182,57 @@ table tr:nth-child(odd) {
 .navigation {
 	float: right;
 	display: inline;
-	width: 620px;
-	margin: 60px 0 0 0;
-	background: #e10605;
-	box-shadow: #a7a7a7 0 1px 4px;
-	-moz-box-shadow: #a7a7a7 0 1px 4px;
-	-webkit-box-shadow: #a7a7a7 0 1px 4px;
-	-o-box-shadow: #a7a7a7 0 1px 4px;
+	position:absolute;
+	right:0;
+}
+
+.navigation-type-2 {
+	max-width: 620px; /* for right-aligned menu => "max-width", fixed => "width" */
+	bottom:20px;
+}
+
+.navigation .has-children > .fade-one > .fade-two > a:after {
+	content: " \00BB";
+}
+
+#menu-primary-items > .background-texture {
+	width:100%;
+}
+
+.navigation .fade-top {
+	background: url(images/fade-top-black.png) repeat-x top;
+	padding:10px 0;
 }
 
 .navigation ul {
-	display: table;
 	width:100%;
+}
+
+#menu-primary-items > .background-texture > li > .fade-one > .fade-two > a {
+	padding:0 20px;
+	margin-top: 20px;
+}
+
+#menu-primary-items > .background-texture > li > .fade-one:hover {
+	background: url(images/fade-left-white-hover-dark.png) repeat-y left top;
+}
+
+#menu-primary-items > .background-texture > li > .fade-one {
+	background: url(images/fade-left-white.png) no-repeat left top;
+}
+
+#menu-primary-items > .background-texture > li > .fade-one > .fade-two {
+	background: url(images/fade-right-black.png) no-repeat right bottom;
+}
+
+.navigation .position-fix {
+	position: relative;
 }
 
 .navigation ul li {
 	position: relative;
-	display: table-cell;
-	text-align:center;
-	background: url(images/nav-divider.png) no-repeat right center;
+	float:left;
+	background: ;
 	font-size: 1em;
 	line-height: 2.5em;
 }
@@ -242,9 +240,7 @@ table tr:nth-child(odd) {
 .navigation ul li a {
 	float: left;
 	padding: 20px 0 0 0;
-	width:100%;
-	background: url(images/nav-item-bg.png) no-repeat 0 center;
-	color: #ffaaaa;
+	background: ;
 }
 
 .navigation ul li.sfHover a,
@@ -252,37 +248,31 @@ table tr:nth-child(odd) {
 .navigation ul li a:hover {
 	background: none;
 	text-decoration: none;
-	color: #fbfbfb;
 }
 
-.navigation ul li:last-child,
+/*.navigation ul li:last-child,
 .navigation ul li.last {
 	background: none;
 	padding: 0;
-}
+}*/
 
-.navigation ul li ul {
+.navigation .sub-menu {
 	position: absolute;
 	top: 100%;
 	left: 0;
 	float: none;
-	width: 200px;
-	padding: 10px 0;
+	width: 12em;
+	/*padding: 10px 0;*/
 	display:none;
-	background: #ab0000;
-	box-shadow: #595550 0 1px 4px;
-	-webkit-box-shadow: #595550 0 1px 4px;
-	-moz-box-shadow: #595550 0 1px 4px;
-	border-top: solid 1px #990000;
 }
 
-.navigation ul li ul li ul {
+.navigation .sub-menu .sub-menu {
 	position: absolute;
-	top:-10px;
-	left: 0;
+	top:-11px;
+	left: 12em;
 }
 
-.navigation ul li ul li {
+.navigation .sub-menu li {
 	display: block;
 	float: none;
 	text-align:left;
@@ -290,65 +280,43 @@ table tr:nth-child(odd) {
 	line-height: 1.3125em;
 }
 
-.navigation ul li ul li a {
+.navigation .sub-menu li a {
 	display: block;
 	float: none;
 	padding: 2px 5px 2px 10px;
 	background: none;
 	min-height: 21px;
-	color: #ffaaaa;
 }
 
-.navigation ul li ul li:last-child a {
-	padding: 0 10px;
+.navigation .sub-menu li:last-child a {
+	/*padding: 0 .5em;
+	width:11em;*/
 }
 
 .navigation ul li.sfHover ul li a {
 	background: none;
-	color: #ffaaaa;
 }
 
 .navigation ul li ul li.current a,
 .navigation ul li.sfHover ul li a:hover,
 .navigation ul li ul li a:hover {
-	background: url(images/dd-item-bg.png) repeat-y 0 0;
-	color: #fbfbfb;
+	background: url(images/fade-left-white-hover.png) repeat-y top left;
 }
 
 .navigation ul li.sfHover a,
 .navigation ul li.current a,
 .navigation ul li a:hover {
-	background: url(images/nav-2-active.png) no-repeat 0 0;
-}
-
-.navigation-type-2 {
-	background: #ee3333 url(images/navigation-type-2-bg.png) repeat 0 0;
-}
-
-.navigation-type-2 ul li a {
-	background: url(images/nav-2-item-bg.png) no-repeat 0 0;
-}
-
-.navigation-type-2 ul li ul li a,
-.navigation-type-2 ul li.sfHover ul li a {
-	background: none;
-}
-
-.navigation-type-2 ul li ul {
-	background: #b30000 url(images/nav-2-dd-bg.png) repeat 0 0;
-}
-
-.navigation-type-2 ul li.sfHover ul li.current a {
-	background: url(images/dd-item-bg.png) repeat-y 0 0;
+	background: ;
 }
 
 .navigation-wide {
 	float: none;
 	display: block;
-	position: relative;
+	position: absolute;
+	bottom: 0;
 	z-index: 11;
 	margin: 0 0 20px 0;
-	width: 940px;
+	width: 100%;
 }
 
 .navigation-wide ul li a {
@@ -357,11 +325,14 @@ table tr:nth-child(odd) {
 
 .header-search {
 	position: absolute;
-	top: 30px;
+	bottom: 90px;
 	right: 0;
 	width: 300px;
 	height: 40px;
-	background: #e3e3e3 url(images/search-bg.png) repeat-x 0 0;
+}
+
+.header-search #searchform {
+	background: url(images/fade-top-black.png) repeat-x top;
 }
 
 .header-search input.field {
@@ -371,8 +342,6 @@ table tr:nth-child(odd) {
 	padding: 9px 32px 9px 0;
 	border: 0;
 	margin: 0 9px 0 0;
-	background: url(images/search-field-bg.png) no-repeat right center;
-	color: #898989;
 	font-size: 1.125em;
 }
 
@@ -384,8 +353,6 @@ table tr:nth-child(odd) {
 	padding: 5px 0 0 0;
 	border: 0;
 	cursor: pointer;
-	background: #c4c4c4;
-	color: #e3e3e3;
 	font-size: 1.125em;
 	font-weight: 600;
 	font-style: italic;
@@ -393,10 +360,11 @@ table tr:nth-child(odd) {
 
 .header-c {
 	padding-top: 0 !important;
+	height: 220px !important;
 }
 
 .header-c .header-search {
-	top: 90px;
+	bottom: 110px;
 	right: 20px;
 }
 
@@ -409,9 +377,6 @@ table tr:nth-child(odd) {
 .second-menu {
 	position: relative;
 	z-index: 8;
-	border-top: solid 1px #c7c7c7;
-	border-bottom: solid 1px #c7c7c7;
-	background: #fbfbfb;
 }
 
 .second-menu ul {
@@ -424,15 +389,13 @@ table tr:nth-child(odd) {
 	float: left;
 	display: inline;
 	padding: 0 60px 0 20px;
-	color: #8b8b8b;
 	font-size: 1em;
 	line-height: 2.5em;
 }
 
 .second-menu ul li a {
 	float: left;
-	display: inline;
-	color: #8b8b8b;
+	display: inline
 }
 
 .second-menu ul li.sfHover a,
@@ -452,15 +415,6 @@ table tr:nth-child(odd) {
 	top: 100%;
 	left: 0;
 	display:none;
-	border: solid 1px #c7c7c7;
-	border-top: solid 1px #fbfbfb;
-	background: #fbfbfb;
-}
-
-.second-menu ul li ul li.current a,
-.second-menu ul li.sfHover ul li a:hover,
-.second-menu ul li ul li a:hover {
-	background: #e0e0e0;
 }
 
 .second-menu ul li ul li {
@@ -472,9 +426,8 @@ table tr:nth-child(odd) {
 
 .second-menu ul li ul li ul {
 	position:absolute;
-	top:0;
+	top:-1px;
 	left:0;
-	border-top:1px solid #c7c7c7;
 }
 
 .second-menu ul li ul li a {
@@ -483,15 +436,7 @@ table tr:nth-child(odd) {
 	float: none;
 }
 
-.second-menu ul li.sfHover ul li a {
-	 }
-
-.breadcrumbs {
-	color: #c7c7c7;
-}
-
 .breadcrumbs a {
-	color: #c7c7c7;
 	font-style: italic;
 }
 
@@ -504,7 +449,6 @@ table tr:nth-child(odd) {
 .breadcrumbs a:hover,
 .breadcrumbs .trail-end {
 	text-decoration: none;
-	color: #8b8b8b;
 }
 
 .breadcrumbs .sep {
@@ -514,8 +458,6 @@ table tr:nth-child(odd) {
 .breadcrumbs-without-menu {
 	margin: 0 0 20px 0;
 	padding: 0;
-	border-top: solid 1px #c7c7c7;
-	border-bottom: solid 1px #c7c7c7;
 	font-size: 1em;
 	line-height: 2.5em;
 }
@@ -767,18 +709,13 @@ table tr:nth-child(odd) {
 .article.list h2 {
 	padding: 5px 0 10px 0;
 	clear:both;
-	color: #8c8c8c;
 	border-bottom: none;
 	font-size: 2.25em;
 	line-height: 2.375em;
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 700;
 	font-style: normal;
 	text-align: left;
-}
-
-.article.list h2 a:hover {
-	color: #0252aa;
 }
 
 .article em {
@@ -786,7 +723,7 @@ table tr:nth-child(odd) {
 }
 
 .article strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .article strike, 
@@ -845,7 +782,7 @@ table tr:nth-child(odd) {
 }
 
 .article dl dt {
-	font-weight:bold;
+	font-weight:700;
 }
 
 .article dl {
@@ -883,10 +820,6 @@ table tr:nth-child(odd) {
 	display: block;
 	padding:5px;
 	margin:20px 20px 20px 0;
-	box-shadow: #858585 0 2px 5px;
-	moz-box-shadow: #858585 0 2px 5px;
-	-webkit-box-shadow: #858585 0 2px 5px;
-	background:#fbfbfb;
 }
 
 .article img {
@@ -963,7 +896,6 @@ table tr:nth-child(odd) {
 	border-bottom: 1px solid;
 	margin: 5px 0 25px 0;
 	padding: 0 0 5px 0;
-	border-color: #c7c7c7;
 	font-size: 0.75em;
 }
 
@@ -972,7 +904,6 @@ table tr:nth-child(odd) {
 	margin: 5px 0 5px 0;
 	padding: 0 0 5px 0;
 	clear:both;
-	border-color: #c7c7c7;
 	font-size: 0.75em;
 }
 
@@ -1001,16 +932,13 @@ table tr:nth-child(odd) {
 .post h2 {
 	padding: 0 0 10px 0;
 	margin: 0 0 10px 0;
-	color: #8c8c8c;
-	border-bottom: solid 1px #c7c7c7;
 	font-size: 1.5em;
 	line-height: 1.625em;
 	font-style: italic;
 }
 
 .post h3 {
-	padding: 5px 0 19px 0;
-	color: #787878;
+	padding: 5px 0 19px 0
 	font-size: 1em;
 	line-height: 1.5em;
 	font-style: italic;
@@ -1035,8 +963,6 @@ table tr:nth-child(odd) {
 #content .two-column .col h2 {
 	padding: 0 0 10px 0;
 	margin: 0 0 10px 0;
-	color: #8c8c8c;
-	border-bottom: solid 1px #c7c7c7;
 	font-size: 1.5em;
 	line-height: 1.625em;
 	font-style: italic;
@@ -1055,13 +981,7 @@ table tr:nth-child(odd) {
 .page-links span {
 	padding:2px 8px;
 	margin:0 2px;
-	background-color:#787878;
-	color:#fbfbfb;
 	font-weight: 600;
-}
-
-.page-links a span {
-	background-color: #0252aa;
 }
 
 /* End Article Styling */
@@ -1079,8 +999,6 @@ table tr:nth-child(odd) {
 	padding: 0 0 15px 0;
 	margin: 0 0 15px 0;
 	font-style: normal;
-	border-bottom: solid 1px #c7c7c7;
-	color: #aaaaaa;
 	font-size: 1.125em;
 	line-height: 1.375em;
 }
@@ -1092,11 +1010,8 @@ table tr:nth-child(odd) {
 
 .widget-search .search-text {
 	display:block;
-	border: solid #c7c7c7 1px;
-	background-color:#fbfbfb;
 	font-size:1.125em;
-	font-weight:normal;
-	color:#787878;
+	font-weight:400;
 	padding:5px;
 	width:288px;
 }
@@ -1116,9 +1031,6 @@ table tr:nth-child(odd) {
 	height:60px;
 	float:left;
 	margin-right:20px;
-	box-shadow: #858585 0 2px 5px;
-	moz-box-shadow: #858585 0 2px 5px;
-	-webkit-box-shadow: #858585 0 2px 5px;
 }
 
 .comment-list li .comment-content-wrap {
@@ -1127,11 +1039,6 @@ table tr:nth-child(odd) {
 
 .comment-list li {
 	margin-bottom:60px;
-}
-
-.comment-list li .comment-content,
-.comment-list li .ping-content {
-	border-top:#c7c7c7 1px solid;
 }
 
 .comment-list li .comment-content .comment-meta,
@@ -1150,10 +1057,8 @@ table tr:nth-child(odd) {
 .comment-list li .comment-content .comment-reply-link,
 .comment-list li .ping-content .ping-reply-link {
 	float:right;
-	font-weight:bold;
+	font-weight:700;
 	padding:2px 8px;
-	background-color:#0252AA;
-	color:#fbfbfb;
 	font-size:0.75em;
 }
 
@@ -1176,7 +1081,6 @@ table tr:nth-child(odd) {
 }
 
 .comments-nav {
-	background-color:#e2e2e2;
 	margin-bottom:20px;
 	margin-top:50px;
 	padding:0 5px;
@@ -1222,29 +1126,21 @@ table tr:nth-child(odd) {
 #respond textarea {
 	display:block;
 	width:100%;
-	border: solid #c7c7c7 1px;
-	background-color:#fbfbfb;
 	font-size:1.125em;
-	font-weight:normal;
-	color:#787878;
+	font-weight:400;
 	padding:5px;
 }
 
 #respond .text-input {
 	display:block;
-	border: solid #c7c7c7 1px;
-	background-color:#fbfbfb;
 	font-size:1.125em;
-	font-weight:normal;
-	color:#787878;
+	font-weight:400;
 	padding:5px;
 }
 
 #respond #submit {
-	background-color:#0252AA;
-	color:#fbfbfb;
 	font-size:0.75em;
-	font-weight:bold;
+	font-weight:700;
 	float:right;
 	border:none;
 	padding:5px 10px;
@@ -1263,12 +1159,6 @@ table tr:nth-child(odd) {
 
 .widget h2 {
 	padding: 0 0 15px 0;
-}
-
-.widget .col .image {
-	box-shadow: #858585 0 2px 5px;
-	-moz-box-shadow: #858585 0 2px 5px;
-	-webkit-box-shadow: #858585 0 2px 5px;
 }
 
 .widget .col .image img {
@@ -1403,19 +1293,19 @@ table tr:nth-child(odd) {
 .footer-line-1 {
 	border:0;
 	margin:0;
-	border-top:solid 1px #<?php echo($a2d50); ?>;
+	border-top:solid 1px #c7c7c7;
 }
 
 .footer-line-2 {
 	border:0;
 	margin:0;
-	border-top:solid 1px #<?php echo($a3d50); ?>;
+	border-top:solid 1px #a8a8a8;
 }
 
 .footer-line-3 {
 	border:0;
 	margin:0;
-	border-top:solid 1px #<?php echo($a4d50); ?>;
+	border-top:solid 1px #606060;
 }
 
 /* End Footer Widgets */
@@ -1426,10 +1316,6 @@ table tr:nth-child(odd) {
  
 #footer .shell {
 	padding: 30px 0;
-}
-
-#footer .background-texture {
-	background: url(images/texture-stripes-black.png) repeat 0 0;
 }
 
 #footer .fade-top {
@@ -1455,7 +1341,6 @@ table tr:nth-child(odd) {
 	display: inline;
 	width: 710px;
 	text-align: center;
-	border-top: solid 1px #c7c7c7;
 }
 
 #footer .footer-menu ul {
@@ -1466,13 +1351,8 @@ table tr:nth-child(odd) {
 #footer .footer-menu ul li {
 	display: table-cell;
 	text-align:center;
-	color: #8b8b8b;
 	font-size: 0.875em;
 	line-height: 1.25em;
-}
-
-#footer .footer-menu ul li a {
-	color: #8b8b8b;
 }
 
 #footer .copy {
@@ -1480,7 +1360,6 @@ table tr:nth-child(odd) {
 	position: absolute;
 	bottom: 30px;
 	right: 0;
-	color: #898989;
 	font-size: 0.875em;
 	line-height: 1em;
 }
@@ -1502,7 +1381,7 @@ table tr:nth-child(odd) {
 
 #wp-calendar thead {
 	font-size:0.75em;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform:uppercase;
 }
 

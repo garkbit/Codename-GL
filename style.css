@@ -1,8 +1,12 @@
 /*
-Theme Name:		Gorilla League
+Theme Name:		Aaron's Theme
 Theme URI:		localhost
 Description:	A simple theme with unlimited color possibilities
 Version:		0.1
 Author:			Aaron Nelson
 Author URI:		localhost
 */
+
+@import url("stylesheets/reset.css");
+@import url("stylesheets/style.css");
+/*import url("stylesheets/nav-test.css");*/

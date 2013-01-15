@@ -3,9 +3,8 @@
 <head <?php language_attributes(); ?>>
 	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 	<title><?php hybrid_document_title(); ?></title>
-	<link rel="stylesheet" href="<?php echo (bloginfo('template_directory')); ?>/stylesheets/reset.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="<?php echo (bloginfo('template_directory')); ?>/stylesheets/style.php" type="text/css" media="all" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
+	<?php get_template_part( 'dynamic-css' ); // Loads the dynamic CSS. ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
@@ -16,27 +15,35 @@
 <body>
 	<div id="wrapper">
 		<div class="background-texture">
-		<div class="fade-bottom">
-		<div class="shell">
-			
-			<!-- Header -->
-			<div id="header">
-				<div id="logo">
-					<a></a>
-				</div>
-				<!-- Primary Navigation -->
-				<?php get_template_part( 'menu', 'primary' ); ?>
-				<!-- End Primary Navigation -->
-				<div class="cl">&nbsp;</div>
-				<?php get_search_form($echo); ?>
-			</div>
-			<!-- End Header -->
+			<div class="fade-bottom">
+				<div class="shell">
+					
+					<!-- Header -->
+					<?php $header_style = get_theme_mod('header_style', 'logo'); ?>
+					<?php if('logo' == $header_style): ?>
+						<?php echo('<div id="header">'); ?>
+							<?php echo('<div id="logo">'); ?>
+								<?php echo('<a></a>'); ?>
+							<?php echo('</div>'); ?>
+							<?php get_template_part( 'menu', 'primary' ); ?>
+							<?php echo('<div class="cl">&nbsp;</div>'); ?>
+							<?php get_search_form($echo); ?>
+						<?php echo('</div>'); ?>
+					<? else: ?>
+						<?php echo('<div id="header" class="header-c">'); ?>
+							<?php echo('<img src="/~mossface/gl/header-image.jpg" alt="Image" />'); ?>
+							<?php get_template_part('menu', 'primary'); ?>
+							<?php echo('<div class="cl">&nbsp;</div>'); ?>
+							<?php get_search_form($echo); ?>
+						<?php echo('</div><!-- .header-c -->'); ?>
+					<?php endif; ?>
+					<!-- End Header -->
 
-		<!-- Main -->
-		<div id="main">
-			<!-- Secondary Navigation -->
-			<?php get_template_part( 'menu', 'secondary' ); ?>
-			<!-- End Secondary Navigation -->
-			<!-- Breadcrumbs -->
-			<?php get_template_part('breadcrumb'); ?>
-			<!-- End Breadcrumbs -->
+				<!-- Main -->
+				<div id="main">
+					<!-- Secondary Navigation -->
+					<?php get_template_part( 'menu', 'secondary' ); ?>
+					<!-- End Secondary Navigation -->
+					<!-- Breadcrumbs -->
+					<?php get_template_part('breadcrumb'); ?>
+					<!-- End Breadcrumbs -->
