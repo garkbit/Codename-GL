@@ -30,6 +30,45 @@
 }
 
 /**
+ * Shifts the luminance of a single color by $shift in the direction $direction
+ * 
+ * @since 0.1.0
+ * @access public
+ * @return void
+ */
+function shift_luminance($color, $shift, $direction="high_contrast") {
+	$RGB = array(
+		"R" => hexdec(substr($color, 1, 2)),
+		"G" => hexdec(substr($color, 3, 2)),
+		"B" => hexdec(substr($color, 5, 2))
+	);
+	$luminance = an_luminance($base_color);
+	switch($direction){
+		case "lighter":
+			return ("#" . an_array2color(an_dec2hex(an_shift_luminance($RGB, -($shift/100)))));
+			break;
+		case "darker":
+			return ("#" . an_array2color(an_dec2hex(an_shift_luminance($RGB, ($shift/100)))));
+			break;
+		case "high_contrast":
+			if($luminance < 50){
+				return ("#" . an_array2color(an_dec2hex(an_shift_luminance($RGB, -($shift/100)))));
+			} else {
+				return ("#" . an_array2color(an_dec2hex(an_shift_luminance($RGB, ($shift/100)))));
+			}
+			break;
+		case "low_contrast":
+			if($luminance < 50){
+				return ("#" . an_array2color(an_dec2hex(an_shift_luminance($RGB, ($shift/100)))));
+			} else {
+				return ("#" . an_array2color(an_dec2hex(an_shift_luminance($RGB, -($shift/100)))));
+			}
+			break;
+	}
+	
+}
+
+/**
  * Calculates luminance of a color.
  * 
  * @since 0.1.0
