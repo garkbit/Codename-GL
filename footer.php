@@ -5,34 +5,34 @@
 		<!-- End Shell -->
 		<?php if(is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' )){
 			if(is_active_sidebar( 'footer-1')){
-				echo('<hr class="footer-line-1" />');
+				echo('<div class="footer-line-1" ></div>');
 			} elseif(is_active_sidebar( 'footer-2')) {
-				echo('<hr class="footer-line-2" />');
+				echo('<div class="footer-line-2" ></div>');
 			} elseif(is_active_sidebar( 'footer-3')) {
-				echo('<hr class="footer-line-3" />');
+				echo('<div class="footer-line-3" ></div>');
 			}
 		}
 		get_sidebar('footer-1');
 		if(is_active_sidebar( 'footer-1' )){
 			if(is_active_sidebar( 'footer-2' )) {
-				echo('<hr class="footer-line-2" />');
+				echo('<div class="footer-line-2" ></div>');
 			} elseif(is_active_sidebar( 'footer-3' )) {
-				echo('<hr class="footer-line-3" />');
+				echo('<div class="footer-line-3" ></div>');
 			} else {
-				echo('<hr class="footer-line-1" />');
+				echo('<div class="footer-line-1" ></div>');
 			}
 		}
 		get_sidebar('footer-2');
 		if(is_active_sidebar( 'footer-2' )){
 			if(is_active_sidebar( 'footer-3' )) {
-				echo('<hr class="footer-line-3" />');
+				echo('<div class="footer-line-3" ></div>');
 			} else {
-				echo('<hr class="footer-line-2" />');
+				echo('<div class="footer-line-2" ></div>');
 			}
 		}
 		get_sidebar('footer-3');
 		if(is_active_sidebar( 'footer-3' )){
-			echo('<hr class="footer-line-3" />');
+			echo('<div class="footer-line-3" ></div>');
 		} ?>
 		<div class="cl">&nbsp;</div>
 	</div><!-- #wrapper -->

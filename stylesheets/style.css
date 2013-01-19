@@ -995,6 +995,10 @@ select {
 	margin-top: 125px;
 }
 
+#sidebar .widget {
+	margin-bottom: 20px;
+}
+
 #sidebar h3 {
 	padding: 0 0 15px 0;
 	margin: 0 0 15px 0;
@@ -1008,7 +1012,7 @@ select {
 	background: url(images/point.png) no-repeat 0 12px;
 }
 
-.widget-search .search-text {
+.widget.search .search-text {
 	display:block;
 	font-size:1.125em;
 	font-weight:400;
@@ -1194,19 +1198,19 @@ select {
 .footer-line-1 {
 	border:0;
 	margin:0;
-	border-top:solid 1px #c7c7c7;
+	height:1px;
 }
 
 .footer-line-2 {
 	border:0;
 	margin:0;
-	border-top:solid 1px #a8a8a8;
+	height:1px;
 }
 
 .footer-line-3 {
 	border:0;
 	margin:0;
-	border-top:solid 1px #606060;
+	height:1px;
 }
 
 /* End Footer Widgets */

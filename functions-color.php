@@ -42,7 +42,7 @@ function shift_luminance($color, $shift, $direction="high_contrast") {
 		"G" => hexdec(substr($color, 3, 2)),
 		"B" => hexdec(substr($color, 5, 2))
 	);
-	$luminance = an_luminance($base_color);
+	$luminance = an_luminance($color);
 	switch($direction){
 		case "lighter":
 			return ("#" . an_array2color(an_dec2hex(an_shift_luminance($RGB, -($shift/100)))));
