@@ -30,32 +30,25 @@
 	$footer_1_advanced = get_theme_mod('footer_1_color_advanced');
 	$footer_1_background			= ($footer_1_advanced)		? get_theme_mod('footer_1_background_color')		: get_theme_mod('footer_1_color');
 	$footer_1_text					= ($footer_1_advanced)		? get_theme_mod('footer_1_text_color')				: shift_luminance($footer_1_background, 35, "high_contrast");
-	$footer_1_headline				= ($footer_1_advanced)		? get_theme_mod('footer_1_headline_color')			: shift_luminance($footer_1_background, 50, "high_contrast");
+	$footer_1_headline				= ($footer_1_advanced)		? get_theme_mod('footer_1_headline_color')			: shift_luminance($footer_1_background, 45, "high_contrast");
 	$footer_1_link					= ($footer_1_advanced)		? get_theme_mod('footer_1_advanced_link_color')		: get_theme_mod('footer_1_link_color');
 	$footer_1_luminance = an_luminance($footer_1_background);
 	
 	$footer_2_advanced = get_theme_mod('footer_2_color_advanced');
 	$footer_2_background			= ($footer_2_advanced)		? get_theme_mod('footer_2_background_color')		: get_theme_mod('footer_2_color');
 	$footer_2_text					= ($footer_2_advanced)		? get_theme_mod('footer_2_text_color')				: shift_luminance($footer_2_background, 35, "high_contrast");
-	$footer_2_headline				= ($footer_2_advanced)		? get_theme_mod('footer_2_headline_color')			: shift_luminance($footer_2_background, 50, "high_contrast");
+	$footer_2_headline				= ($footer_2_advanced)		? get_theme_mod('footer_2_headline_color')			: shift_luminance($footer_2_background, 45, "high_contrast");
 	$footer_2_link					= ($footer_2_advanced)		? get_theme_mod('footer_2_advanced_link_color')		: get_theme_mod('footer_2_link_color');
 	$footer_2_luminance = an_luminance($footer_2_background);
 	
 	$footer_3_advanced = get_theme_mod('footer_3_color_advanced');
 	$footer_3_background			= ($footer_3_advanced)		? get_theme_mod('footer_3_background_color')		: get_theme_mod('footer_3_color');
 	$footer_3_text					= ($footer_3_advanced)		? get_theme_mod('footer_3_text_color')				: shift_luminance($footer_3_background, 35, "high_contrast");
-	$footer_3_headline				= ($footer_3_advanced)		? get_theme_mod('footer_3_headline_color')			: shift_luminance($footer_3_background, 50, "high_contrast");
+	$footer_3_headline				= ($footer_3_advanced)		? get_theme_mod('footer_3_headline_color')			: shift_luminance($footer_3_background, 45, "high_contrast");
 	$footer_3_link					= ($footer_3_advanced)		? get_theme_mod('footer_3_advanced_link_color')		: get_theme_mod('footer_3_link_color');
 	$footer_3_luminance = an_luminance($footer_3_background);
 ?>
 <style type="text/css">
-test {
-	color:<?php echo $navigation_background; ?>
-	color:<?php echo shift_luminance($navigation_background, 55, "high_contrast"); ?>
-	luminance: <?php echo $navigation_luminance; ?>
-}
-
-
 /* Body Colors */
 body {
 	color: <?php echo $body_text; ?>;
