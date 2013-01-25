@@ -46,7 +46,7 @@
 			<div class="fade-top">
 				<!-- Shell -->
 				<div class="shell">
-					<a href="#" class="logo left">Logo</a>
+					<a href="#"><img src="<?php echo get_theme_mod('footer_logo') ?>" /></a>
 					<?php if ( has_nav_menu( 'subsidiary' ) ) : ?>
 						<?php wp_nav_menu( array( 'depth' => '1', 'theme_location' => 'subsidiary', 'container_class' => 'footer-menu menu', 'menu_class' => '', 'menu_id' => 'menu-subsidiary-items', 'fallback_cb' => '' ) ); ?>
 					<?php endif; ?>

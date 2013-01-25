@@ -3,7 +3,7 @@ class an_customize {
 	public static function register( $wp_customize ) {
 		
 		/*
-		 *  Add Header Style Setting
+		 *  Add Header Settings
 		 */
 		$wp_customize->add_setting( 'header_style', array(
 			'default' => 'logo',
@@ -11,29 +11,77 @@ class an_customize {
 			'transport' => 'refresh',
 		));
 		
+		$wp_customize->add_setting( 'header_logo', array(
+			'default' => ''
+		));
+		
+		$wp_customize->add_setting( 'header_banner', array(
+			'default' => ''
+		));
+		
+		$wp_customize->add_setting( 'footer_logo', array(
+			'default' => ''
+		));
+		
 		/*
-		 *  Add Color Mode Settings
+		 *  Add Color Scheme Settings
 		 */
-		 $wp_customize->add_setting( 'color_mode', array(
-			'default' => 'scheme'
+		 $wp_customize->add_setting( 'color_scheme', array(
+			'default' => 0
 		 ));
 		
-		
+		$wp_customize->add_setting( 'custom_color', array(
+			'default' => 0,
+			'type' => 'theme_mod',
+			'transport' => 'refresh'
+		));
+		 
 		/*
-		 *  Add Navigation Color Settings
+		 *  Add Custom Color Settings
 		 */
-		$wp_customize->add_setting( 'navigation_color', array(
+		 $wp_customize->add_setting( 'advanced_color', array(
+			'default' => 0
+		 ));
+		 
+		 $wp_customize->add_setting( 'navigation_color', array(
 			'default' => '#c70000',
 			'type' => 'theme_mod',
 			'transport' => 'refresh',
 		));
 		
-		$wp_customize->add_setting( 'navigation_color_advanced', array(
-			'default' => 0,
+		$wp_customize->add_setting( 'body_color', array(
+			'default' => '#fbfbfb',
 			'type' => 'theme_mod',
-			'transport' => 'refresh'
+			'transport' => 'refresh',
 		));
 		
+		$wp_customize->add_setting( 'body_link_color', array(
+			'default' => '#013c84',
+			'type' => 'theme_mod',
+			'transport' => 'refresh',
+		));
+		
+		$wp_customize->add_setting( 'footer_1_color', array(
+			'default' => '#e4e4e4',
+			'type' => 'theme_mod',
+			'transport' => 'refresh',
+		));
+		
+		$wp_customize->add_setting( 'footer_2_color', array(
+			'default' => '#c4c4c4',
+			'type' => 'theme_mod',
+			'transport' => 'refresh',
+		));
+		
+		$wp_customize->add_setting( 'footer_3_color', array(
+			'default' => '#a3a3a3',
+			'type' => 'theme_mod',
+			'transport' => 'refresh',
+		));
+		
+		/*
+		 *  Add Navigation Color Settings
+		 */
 		$wp_customize->add_setting( 'navigation_gradient_start', array(
 			'default' => '#d84d4d',
 			'type' => 'theme_mod',
@@ -68,24 +116,6 @@ class an_customize {
 		/*
 		 *  Add Body Color Settings
 		 */
-		$wp_customize->add_setting( 'body_color', array(
-			'default' => '#fbfbfb',
-			'type' => 'theme_mod',
-			'transport' => 'refresh',
-		));
-		
-		$wp_customize->add_setting( 'body_link_color', array(
-			'default' => '#0252aa',
-			'type' => 'theme_mod',
-			'transport' => 'refresh',
-		));
-		
-		$wp_customize->add_setting( 'body_color_advanced', array(
-			'default' => 0,
-			'type' => 'theme_mod',
-			'transport' => 'refresh'
-		));
-		
 		$wp_customize->add_setting( 'body_background_color', array(
 			'default' => '#fbfbfb',
 			'type' => 'theme_mod',
@@ -149,11 +179,6 @@ class an_customize {
 		/*
 		 *  Add Secondary Nav / Breadcrumb Color Settings
 		 */
-		$wp_customize->add_setting( 'breadcrumb_color_advanced', array(
-			'default' => 0,
-			'type' => 'theme_mod',
-			'transport' => 'refresh'
-		));
 		
 		$wp_customize->add_setting( 'breadcrumb_text_color', array(
 			'default' => '#888888',
@@ -180,24 +205,6 @@ class an_customize {
 		/*
 		 *  Add Footer 1 Color Settings
 		 */
-		$wp_customize->add_setting( 'footer_1_color', array(
-			'default' => '#e4e4e4',
-			'type' => 'theme_mod',
-			'transport' => 'refresh',
-		));
-		
-		$wp_customize->add_setting( 'footer_1_link_color', array(
-			'default' => '#0252aa',
-			'type' => 'theme_mod',
-			'transport' => 'refresh',
-		));
-		
-		$wp_customize->add_setting( 'footer_1_color_advanced', array(
-			'default' => 0,
-			'type' => 'theme_mod',
-			'transport' => 'refresh'
-		));
-		
 		$wp_customize->add_setting( 'footer_1_background_color', array(
 			'default' => '#e4e4e4',
 			'type' => 'theme_mod',
@@ -226,24 +233,6 @@ class an_customize {
 		/*
 		 *  Add Footer 2 Color Settings
 		 */
-		$wp_customize->add_setting( 'footer_2_color', array(
-			'default' => '#c4c4c4',
-			'type' => 'theme_mod',
-			'transport' => 'refresh',
-		));
-		
-		$wp_customize->add_setting( 'footer_2_link_color', array(
-			'default' => '#0252aa',
-			'type' => 'theme_mod',
-			'transport' => 'refresh',
-		));
-		
-		$wp_customize->add_setting( 'footer_2_color_advanced', array(
-			'default' => 0,
-			'type' => 'theme_mod',
-			'transport' => 'refresh'
-		));
-		
 		$wp_customize->add_setting( 'footer_2_background_color', array(
 			'default' => '#c4c4c4',
 			'type' => 'theme_mod',
@@ -272,24 +261,6 @@ class an_customize {
 		/*
 		 *  Add Footer 3 Color Settings
 		 */
-		$wp_customize->add_setting( 'footer_3_color', array(
-			'default' => '#898989',
-			'type' => 'theme_mod',
-			'transport' => 'refresh',
-		));
-		
-		$wp_customize->add_setting( 'footer_3_link_color', array(
-			'default' => '#0252aa',
-			'type' => 'theme_mod',
-			'transport' => 'refresh',
-		));
-		
-		$wp_customize->add_setting( 'footer_3_color_advanced', array(
-			'default' => 0,
-			'type' => 'theme_mod',
-			'transport' => 'refresh'
-		));
-		
 		$wp_customize->add_setting( 'footer_3_background_color', array(
 			'default' => '#898989',
 			'type' => 'theme_mod',
@@ -319,17 +290,17 @@ class an_customize {
 		 *  Add Sections
 		 */
 		$wp_customize->add_section( 'an-header', array(
-			'title' => __('Header Style', 'an'),
+			'title' => __('Header', 'an'),
 			'priority' => 1000,
 		));
 		
-		$wp_customize->add_section( 'an-color-mode', array(
-			'title' => __('Color Mode','an'),
+		$wp_customize->add_section( 'an-color-scheme', array(
+			'title' => __('Step 1: Pick a Color Scheme','an'),
 			'priority' => 1100
 		));
 		
 		$wp_customize->add_section( 'an-basic-colors', array(
-			'title' => __('Custom Colors', 'an'),
+			'title' => __('Step 2: Custom Colors', 'an'),
 			'priority' => 1200,
 		));
 		
@@ -379,27 +350,98 @@ class an_customize {
 			),
 		));
 		
+		$wp_customize->add_control( 
+			new WP_Customize_Image_Control (
+				$wp_customize,
+				'header_logo',
+				array(
+					'label' => 'Header Logo',
+					'section' => 'an-header',
+					'settings' => 'header_logo',
+					'priority' => 200,
+				)
+			)
+		);
+		
+		$wp_customize->add_control( 
+			new WP_Customize_Image_Control (
+				$wp_customize,
+				'header_banner',
+				array(
+					'label' => 'Header Banner (940px wide)',
+					'section' => 'an-header',
+					'settings' => 'header_banner',
+					'priority' => 300,
+				)
+			)
+		);
+		
+		$wp_customize->add_control( 
+			new WP_Customize_Image_Control (
+				$wp_customize,
+				'footer_logo',
+				array(
+					'label' => 'Footer Logo',
+					'section' => 'an-header',
+					'settings' => 'footer_logo',
+					'priority' => 400,
+				)
+			)
+		);
+		
 		/*
-		 *  Add Color Mode Controls
+		 *  Add Color Scheme Controls
 		 */
-		$wp_customize->add_control( 'color_mode', array(
-			'label' => __( 'Header Style', 'an' ),
-			'section' => 'an-color-mode',
-			'settings' => 'color_mode',
-			'type' => 'radio',
-			'priority' => 100,
+		$wp_customize->add_control( 'color_scheme', array(
+			'label' => __( 'Color Scheme', 'an' ),
+			'section' => 'an-color-scheme',
+			'settings' => 'color_scheme',
+			'type' => 'select',
+			'priority' => 1,
 			'choices' => array(
-				'scheme' => 'Choose a pre-built color scheme',
-				'custom' => 'Custom colors'
+				'scheme_01' => 'White / Red / Light Grey',
+				'scheme_02' => 'White / Light Blue / Light Grey',
+				'scheme_03' => 'White / Dark Blue / Light Grey',
+				'scheme_04' => 'White / Forest Green / Light Grey',
+				'scheme_05' => 'White / Pink / Light Grey',
+				'scheme_16' => 'White / Lime / Maroon',
+				'scheme_19' => 'White / Dark Brown / Lime',
+				'scheme_21' => 'White / Dark Grey / Aqua',
+				'scheme_24' => 'White / Electric Blue / Charcoal',
+				'scheme_12' => 'Charcoal / Lime / White',
+				'scheme_27' => 'Charcoal / Sherbet',
+				'scheme_13' => 'Black / Faded Blue',
+				'scheme_17' => 'Black / White / Maroon',
+				'scheme_18' => 'Light Green / Dark Purple',
+				'scheme_06' => 'Second Chance',
+				'scheme_07' => 'Giant Goldfish',
+				'scheme_08' => 'Thought Provoking',
+				'scheme_09' => 'Sugar',
+				'scheme_10' => 'Dreams',
+				'scheme_11' => 'Terra',
+				'scheme_14' => 'Beach',
+				'scheme_15' => 'Desert',
+				'scheme_20' => 'Olives',
+				'scheme_22' => 'Linoleum',
+				'scheme_23' => 'French',
+				'scheme_25' => 'Jazz',
+				'scheme_26' => 'Leatherbound',
+				'scheme_28' => 'Picasso'
 			),
 		));
-		 
 		
+		$wp_customize->add_control( 'custom_color', array(
+			'label' => __( 'Right then. Let\'s customize! On to step 2.', 'an' ),
+			'section' => 'an-color-scheme',
+			'settings' => 'custom_color',
+			'type' => 'checkbox',
+			'priority' => 100
+		));
 		
 		/*
-		 *  Add Navigation Color Controls
+		 *  Add Custom Color Controls
 		 */
-		$wp_customize->add_control(
+		 $wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'navigation_color',
@@ -412,14 +454,84 @@ class an_customize {
 			)
 		);
 		
-		$wp_customize->add_control( 'navigation_color_advanced', array(
-			'label' => __( 'Enable Advanced Control', 'an' ),
-			'section' => 'an-advanced-colors-menu',
-			'settings' => 'navigation_color_advanced',
-			'type' => 'checkbox',
-			'priority' => 1
-		));
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'body_color',
+				array(
+					'label' => 'Background Color',
+					'section' => 'an-basic-colors',
+					'settings' => 'body_color',
+					'priority' => 200,
+				)
+			)
+		);
 		
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'body_link_color',
+				array(
+					'label' => 'Link Color',
+					'section' => 'an-basic-colors',
+					'settings' => 'body_link_color',
+					'priority' => 300,
+				)
+			)
+		);
+		
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'footer_1_color',
+				array(
+					'label' => 'Footer 1 Background Color',
+					'section' => 'an-basic-colors',
+					'settings' => 'footer_1_color',
+					'priority' => 400,
+				)
+			)
+		);
+		
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'footer_2_color',
+				array(
+					'label' => 'Footer 2 Background Color',
+					'section' => 'an-basic-colors',
+					'settings' => 'footer_2_color',
+					'priority' => 500,
+				)
+			)
+		);
+		
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'footer_3_color',
+				array(
+					'label' => 'Footer 3 Background Color',
+					'section' => 'an-basic-colors',
+					'settings' => 'footer_3_color',
+					'priority' => 600,
+				)
+			)
+		);
+		
+		$wp_customize->add_control( 'advanced_color', array(
+			'label' => __( 'More! Advanced control, please.', 'an' ),
+			'section' => 'an-basic-colors',
+			'settings' => 'advanced_color',
+			'type' => 'checkbox',
+			'priority' => 700
+		));
+		 
+		
+		
+		/*
+		 *  Add Navigation Color Controls
+		 */
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -489,40 +601,6 @@ class an_customize {
 		/*
 		 *  Add Body Color Controls
 		 */
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'body_color',
-				array(
-					'label' => 'Background Color',
-					'section' => 'an-basic-colors',
-					'settings' => 'body_color',
-					'priority' => 200,
-				)
-			)
-		);
-		
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'body_link_color',
-				array(
-					'label' => 'Main Link Color',
-					'section' => 'an-basic-colors',
-					'settings' => 'body_link_color',
-					'priority' => 300,
-				)
-			)
-		);
-		
-		$wp_customize->add_control( 'body_color_advanced', array(
-			'label' => __( 'Enable Advanced Control', 'an' ),
-			'section' => 'an-advanced-colors-body',
-			'settings' => 'body_color_advanced',
-			'type' => 'checkbox',
-			'priority' => 1
-		));
-		
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -653,17 +731,6 @@ class an_customize {
 			)
 		);
 		
-		/*
-		 *  Add Secondary Menu / Breadcrumb Controls
-		 */
-		$wp_customize->add_control( 'breadcrumb_color_advanced', array(
-			'label' => __( 'Enable Advanced Control', 'an' ),
-			'section' => 'an-advanced-colors-breadcrumb',
-			'settings' => 'breadcrumb_color_advanced',
-			'type' => 'checkbox',
-			'priority' => 1
-		));
-		
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -720,39 +787,7 @@ class an_customize {
 		/*
 		 *  Add Footer 1 Color Controls
 		 */
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'footer_1_color',
-				array(
-					'label' => 'Footer 1 Background Color',
-					'section' => 'an-basic-colors',
-					'settings' => 'footer_1_color',
-					'priority' => 400,
-				)
-			)
-		);
 		
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'footer_1_link_color',
-				array(
-					'label' => 'Footer 1 Link Color',
-					'section' => 'an-basic-colors',
-					'settings' => 'footer_1_link_color',
-					'priority' => 500,
-				)
-			)
-		);
-		
-		$wp_customize->add_control( 'footer_1_color_advanced', array(
-			'label' => __( 'Enable Advanced Control', 'an' ),
-			'section' => 'an-advanced-colors-footer-1',
-			'settings' => 'footer_1_color_advanced',
-			'type' => 'checkbox',
-			'priority' => 1
-		));
 		
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
@@ -813,40 +848,6 @@ class an_customize {
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
-				'footer_2_color',
-				array(
-					'label' => 'Footer 2 Background Color',
-					'section' => 'an-basic-colors',
-					'settings' => 'footer_2_color',
-					'priority' => 600,
-				)
-			)
-		);
-		
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'footer_2_link_color',
-				array(
-					'label' => 'Footer 2 Link Color',
-					'section' => 'an-basic-colors',
-					'settings' => 'footer_2_link_color',
-					'priority' => 700,
-				)
-			)
-		);
-		
-		$wp_customize->add_control( 'footer_2_color_advanced', array(
-			'label' => __( 'Enable Advanced Control', 'an' ),
-			'section' => 'an-advanced-colors-footer-2',
-			'settings' => 'footer_2_color_advanced',
-			'type' => 'checkbox',
-			'priority' => 1
-		));
-		
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
 				'footer_2_background_color',
 				array(
 					'label' => 'Background Color',
@@ -900,40 +901,6 @@ class an_customize {
 		/*
 		 *  Add Footer 3 Color Controls
 		 */
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'footer_3_color',
-				array(
-					'label' => 'Footer 3 Background Color',
-					'section' => 'an-basic-colors',
-					'settings' => 'footer_3_color',
-					'priority' => 800,
-				)
-			)
-		);
-		
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'footer_3_link_color',
-				array(
-					'label' => 'Footer 3 Link Color',
-					'section' => 'an-basic-colors',
-					'settings' => 'footer_3_link_color',
-					'priority' => 900,
-				)
-			)
-		);
-		
-		$wp_customize->add_control( 'footer_3_color_advanced', array(
-			'label' => __( 'Enable Advanced Control', 'an' ),
-			'section' => 'an-advanced-colors-footer-3',
-			'settings' => 'footer_3_color_advanced',
-			'type' => 'checkbox',
-			'priority' => 1
-		));
-		
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,

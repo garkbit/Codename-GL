@@ -22,16 +22,16 @@
 					<?php $header_style = get_theme_mod('header_style', 'logo'); ?>
 					<?php if('logo' == $header_style): ?>
 						<?php echo('<div id="header">'); ?>
-							<?php echo('<div id="logo">'); ?>
-								<?php echo('<a></a>'); ?>
-							<?php echo('</div>'); ?>
+							<?php echo('<a href="' . home_url() . '">'); ?>
+								<?php echo('<img class="logo" src="' . get_theme_mod('header_logo') . '" />'); ?>
+							<?php echo('</a>'); ?>
 							<?php get_template_part( 'menu', 'primary' ); ?>
 							<?php echo('<div class="cl">&nbsp;</div>'); ?>
 							<?php get_search_form($echo); ?>
 						<?php echo('</div>'); ?>
 					<? else: ?>
 						<?php echo('<div id="header" class="header-c">'); ?>
-							<?php echo('<img src="/~mossface/gl/header-image.jpg" alt="Image" />'); ?>
+							<?php echo('<img src="' . get_theme_mod('header_banner') . '" alt="Image" />'); ?>
 							<?php get_template_part('menu', 'primary'); ?>
 							<?php echo('<div class="cl">&nbsp;</div>'); ?>
 							<?php get_search_form($echo); ?>

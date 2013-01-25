@@ -1,51 +1,47 @@
 <?php
-	$navigation_advanced = get_theme_mod('navigation_color_advanced');
-	$navigation_background	 		= ($navigation_advanced) 	? get_theme_mod('navigation_gradient_end') 			: get_theme_mod('navigation_color') ;
-	$navigation_gradient_start		= ($navigation_advanced) 	? get_theme_mod('navigation_gradient_start') 		: shift_luminance($navigation_background, 30, "lighter") ;
-	$navigation_gradient_end 		= ($navigation_advanced) 	? get_theme_mod('navigation_gradient_end') 			: $navigation_background ;
-	$navigation_text_color			= ($navigation_advanced) 	? get_theme_mod('navigation_text')					: shift_luminance($navigation_background, 55, "high_contrast");
-	$navigation_text_hover_color	= ($navigation_advanced) 	? get_theme_mod('navigation_text_hover')			: shift_luminance($navigation_background, 95, "high_contrast");
-	$navigation_drop_color			= ($navigation_advanced) 	? get_theme_mod('navigation_drop')					: shift_luminance($navigation_background, 15, "darker");
+	$color_advanced = get_theme_mod('advanced_color');
+	$navigation_background	 		= ($color_advanced) 	? get_theme_mod('navigation_gradient_end') 			: get_theme_mod('navigation_color') ;
+	$navigation_gradient_start		= ($color_advanced) 	? get_theme_mod('navigation_gradient_start') 		: shift_luminance($navigation_background, 30, "lighter") ;
+	$navigation_gradient_end 		= ($color_advanced) 	? get_theme_mod('navigation_gradient_end') 			: $navigation_background ;
+	$navigation_text_color			= ($color_advanced) 	? get_theme_mod('navigation_text')					: shift_luminance($navigation_background, 55, "high_contrast");
+	$navigation_text_hover_color	= ($color_advanced) 	? get_theme_mod('navigation_text_hover')			: shift_luminance($navigation_background, 95, "high_contrast");
+	$navigation_drop_color			= ($color_advanced) 	? get_theme_mod('navigation_drop')					: shift_luminance($navigation_background, 15, "darker");
 	$navigation_luminance = an_luminance($navigation_background);
 	
 	$body_advanced = get_theme_mod('body_color_advanced');
-	$body_background 				= ($body_advanced) 			? get_theme_mod('body_background_color')			: get_theme_mod('body_color');
-	$body_text		 				= ($body_advanced) 			? get_theme_mod('body_text_color')					: shift_luminance($body_background, 50, "high_contrast");
-	$body_link		 				= ($body_advanced) 			? get_theme_mod('body_link_advanced_color')			: get_theme_mod('body_link_color');
-	$body_headline_1				= ($body_advanced) 			? get_theme_mod('body_headline_1_color')			: shift_luminance($body_background, 45, "high_contrast");
-	$body_headline_2				= ($body_advanced) 			? get_theme_mod('body_headline_2_color')			: shift_luminance($body_background, 50, "high_contrast");
-	$body_table_header				= ($body_advanced) 			? get_theme_mod('body_table_header_color')			: shift_luminance($body_background, 45, "high_contrast");
-	$body_table_alternating			= ($body_advanced) 			? get_theme_mod('body_table_alternating_color')		: shift_luminance($body_background, 10, "high_contrast");
-	$body_search_background			= ($body_advanced) 			? get_theme_mod('body_search_background_color')		: shift_luminance($body_background, 10, "high_contrast");
-	$body_search_button				= ($body_advanced) 			? get_theme_mod('body_search_button_color')			: shift_luminance($body_background, 20, "high_contrast");
-	$body_line						= ($body_advanced) 			? get_theme_mod('body_line_color')					: shift_luminance($body_background, 20, "high_contrast");
+	$body_background 				= ($color_advanced) 	? get_theme_mod('body_background_color')			: get_theme_mod('body_color');
+	$body_text		 				= ($color_advanced) 	? get_theme_mod('body_text_color')					: shift_luminance($body_background, 50, "high_contrast");
+	$body_link		 				= ($color_advanced) 	? get_theme_mod('body_link_advanced_color')			: get_theme_mod('body_link_color');
+	$body_headline_1				= ($color_advanced) 	? get_theme_mod('body_headline_1_color')			: shift_luminance($body_background, 45, "high_contrast");
+	$body_headline_2				= ($color_advanced) 	? get_theme_mod('body_headline_2_color')			: shift_luminance($body_background, 50, "high_contrast");
+	$body_table_header				= ($color_advanced) 	? get_theme_mod('body_table_header_color')			: shift_luminance($body_background, 45, "high_contrast");
+	$body_table_alternating			= ($color_advanced) 	? get_theme_mod('body_table_alternating_color')		: shift_luminance($body_background, 10, "high_contrast");
+	$body_search_background			= ($color_advanced) 	? get_theme_mod('body_search_background_color')		: shift_luminance($body_background, 10, "high_contrast");
+	$body_search_button				= ($color_advanced) 	? get_theme_mod('body_search_button_color')			: shift_luminance($body_background, 20, "high_contrast");
+	$body_line						= ($color_advanced) 	? get_theme_mod('body_line_color')					: shift_luminance($body_background, 20, "high_contrast");
 	$body_luminance = an_luminance($body_background);
 	
-	$breadcrumb_advanced = get_theme_mod('breadcrumb_color_advanced');
-	$breadcrumb_text				= ($breadcrumb_advanced)	? get_theme_mod('breadcrumb_text_color')			: shift_luminance($body_background, 45, "high_contrast");
-	$breadcrumb_trail				= ($breadcrumb_advanced)	? get_theme_mod('breadcrumb_trail_color')			: shift_luminance($body_background, 20,  "high_contrast");
-	$breadcrumb_line				= ($breadcrumb_advanced)	? get_theme_mod('breadcrumb_line_color')			: shift_luminance($body_background, 20, "high_contrast");
-	$breadcrumb_highlight			= ($breadcrumb_advanced)	? get_theme_mod('breadcrumb_highlight_color')		: shift_luminance($body_background, 5,  "high_contrast");
+	$breadcrumb_text				= ($color_advanced)		? get_theme_mod('breadcrumb_text_color')			: shift_luminance($body_background, 45, "high_contrast");
+	$breadcrumb_trail				= ($color_advanced)		? get_theme_mod('breadcrumb_trail_color')			: shift_luminance($body_background, 20,  "high_contrast");
+	$breadcrumb_line				= ($color_advanced)		? get_theme_mod('breadcrumb_line_color')			: shift_luminance($body_background, 20, "high_contrast");
+	$breadcrumb_highlight			= ($color_advanced)		? get_theme_mod('breadcrumb_highlight_color')		: shift_luminance($body_background, 5,  "high_contrast");
 	
-	$footer_1_advanced = get_theme_mod('footer_1_color_advanced');
-	$footer_1_background			= ($footer_1_advanced)		? get_theme_mod('footer_1_background_color')		: get_theme_mod('footer_1_color');
-	$footer_1_text					= ($footer_1_advanced)		? get_theme_mod('footer_1_text_color')				: shift_luminance($footer_1_background, 35, "high_contrast");
-	$footer_1_headline				= ($footer_1_advanced)		? get_theme_mod('footer_1_headline_color')			: shift_luminance($footer_1_background, 45, "high_contrast");
-	$footer_1_link					= ($footer_1_advanced)		? get_theme_mod('footer_1_advanced_link_color')		: get_theme_mod('footer_1_link_color');
+	$footer_1_background			= ($color_advanced)		? get_theme_mod('footer_1_background_color')		: get_theme_mod('footer_1_color');
+	$footer_1_text					= ($color_advanced)		? get_theme_mod('footer_1_text_color')				: shift_luminance($footer_1_background, 35, "high_contrast");
+	$footer_1_headline				= ($color_advanced)		? get_theme_mod('footer_1_headline_color')			: shift_luminance($footer_1_background, 45, "high_contrast");
+	$footer_1_link					= ($color_advanced)		? get_theme_mod('footer_1_advanced_link_color')		: get_theme_mod('body_link_color');
 	$footer_1_luminance = an_luminance($footer_1_background);
 	
-	$footer_2_advanced = get_theme_mod('footer_2_color_advanced');
-	$footer_2_background			= ($footer_2_advanced)		? get_theme_mod('footer_2_background_color')		: get_theme_mod('footer_2_color');
-	$footer_2_text					= ($footer_2_advanced)		? get_theme_mod('footer_2_text_color')				: shift_luminance($footer_2_background, 35, "high_contrast");
-	$footer_2_headline				= ($footer_2_advanced)		? get_theme_mod('footer_2_headline_color')			: shift_luminance($footer_2_background, 45, "high_contrast");
-	$footer_2_link					= ($footer_2_advanced)		? get_theme_mod('footer_2_advanced_link_color')		: get_theme_mod('footer_2_link_color');
+	$footer_2_background			= ($color_advanced)		? get_theme_mod('footer_2_background_color')		: get_theme_mod('footer_2_color');
+	$footer_2_text					= ($color_advanced)		? get_theme_mod('footer_2_text_color')				: shift_luminance($footer_2_background, 35, "high_contrast");
+	$footer_2_headline				= ($color_advanced)		? get_theme_mod('footer_2_headline_color')			: shift_luminance($footer_2_background, 45, "high_contrast");
+	$footer_2_link					= ($color_advanced)		? get_theme_mod('footer_2_advanced_link_color')		: get_theme_mod('body_link_color');
 	$footer_2_luminance = an_luminance($footer_2_background);
 	
-	$footer_3_advanced = get_theme_mod('footer_3_color_advanced');
-	$footer_3_background			= ($footer_3_advanced)		? get_theme_mod('footer_3_background_color')		: get_theme_mod('footer_3_color');
-	$footer_3_text					= ($footer_3_advanced)		? get_theme_mod('footer_3_text_color')				: shift_luminance($footer_3_background, 35, "high_contrast");
-	$footer_3_headline				= ($footer_3_advanced)		? get_theme_mod('footer_3_headline_color')			: shift_luminance($footer_3_background, 45, "high_contrast");
-	$footer_3_link					= ($footer_3_advanced)		? get_theme_mod('footer_3_advanced_link_color')		: get_theme_mod('footer_3_link_color');
+	$footer_3_background			= ($color_advanced)		? get_theme_mod('footer_3_background_color')		: get_theme_mod('footer_3_color');
+	$footer_3_text					= ($color_advanced)		? get_theme_mod('footer_3_text_color')				: shift_luminance($footer_3_background, 35, "high_contrast");
+	$footer_3_headline				= ($color_advanced)		? get_theme_mod('footer_3_headline_color')			: shift_luminance($footer_3_background, 45, "high_contrast");
+	$footer_3_link					= ($color_advanced)		? get_theme_mod('footer_3_advanced_link_color')		: get_theme_mod('body_link_color');
 	$footer_3_luminance = an_luminance($footer_3_background);
 ?>
 <style type="text/css">

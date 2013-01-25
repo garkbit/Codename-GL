@@ -360,7 +360,14 @@ select {
 
 .header-c {
 	padding-top: 0 !important;
-	height: 220px !important;
+	min-height: 160px !important;
+}
+
+.header-c img {
+	width:940px;
+	height:auto;
+	margin-bottom: 60px;
+	
 }
 
 .header-c .header-search {
